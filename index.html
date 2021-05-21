@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  
+  </head>
+  <body>
+      <div id="wrapper"  onclick="myFunction()">
+    <h1 class="head" id="headshot" data-text="LEARN">LEARN</h1>
+</div>
+    <h1 class="head1">Create What You Love</h1>
+
+    <script>
+        //array
+
+      var content = ["CREATE", "WHAT", "YOU", "LOVE"];
+
+      //function
+
+      function myFunction() {
+       var headshot = document.getElementById("headshot").innerHTML = content[Math.floor(Math.random()*content.length)];
+       
+       var datd = document.querySelectorAll("h1[data-text]").innerHTML = headshot;
+
+       //testing
+       console.log(datd);
+       console.log(headshot);
+
+       //returning 
+       return headshot;
+       return datd;
+       
+        //function over
+      }
+    </script>
+  </body>
+</html>
